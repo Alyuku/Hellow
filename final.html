@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend ?</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+        }
+
+        .icon-frame {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1em;
+            overflow: hidden;
+        }
+
+        .icon-frame img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+
+        header {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            color: #007bff;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 1em 0;
+            padding: 0 20px;
+            line-height: 1.5em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 1em;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function showConfirm() {
+            const confirmation = confirm("Are you sure?");
+            if (confirmation) {
+                window.location.href = "https://t.me/yourowell"; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="icon-frame">
+        <img src="https://i.imgur.com/mMSn56F.png" alt="owl">
+    </div>
+
+    <header>Hello, Adreana!</header>
+    <p>
+        I want to impress you a little bit. <Br>
+I hope you don’t feel uncomfortable with me. Can we be friends, but still stay anonymous?.
+    </p>
+    <a href="#" class="cta-button" onclick="showConfirm(); return false;">Let's Be a Friend</a>
+</body>
+</html>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friend ?</title>
     <style>
-        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -66,12 +65,51 @@
         .cta-button:hover {
             background-color: #0056b3;
         }
+
+        .language-toggle {
+            margin-bottom: 1em;
+        }
+
+        .language-button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .language-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .language-button:focus {
+            outline: none;
+        }
     </style>
     <script>
         function showConfirm() {
             const confirmation = confirm("Are you sure?");
             if (confirmation) {
                 window.location.href = "https://t.me/yourowell"; 
+            }
+        }
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('header').innerText = "Hello, Adreana!";
+                document.getElementById('paragraph').innerText = 
+                    "I want to impress you a little bit. I hope you don’t feel uncomfortable with me. Can we be friends while still staying anonymous? I’ll give you my second account.";
+                document.getElementById('cta-button').innerText = "Let's Be a Friend";
+            } else {
+                document.getElementById('header').innerText = "Halo, Adreana!";
+                document.getElementById('paragraph').innerText = 
+                    "Saya ingin memberikan kesan yang baik pada Anda. Semoga Anda tidak merasa risih dengan saya. Apakah kita bisa berteman, tetapi tetap anonim? Saya akan memberikan akun kedua saya kepada Anda.";
+                document.getElementById('cta-button').innerText = "Mari Menjadi Teman";
             }
         }
     </script>
@@ -81,11 +119,16 @@
         <img src="https://i.imgur.com/mMSn56F.png" alt="owl">
     </div>
 
-    <header>Hello, Adreana!</header>
-    <p>
-        I want to impress you a little bit. <Br>
-I hope you don’t feel uncomfortable with me. Can we be friends, but still stay anonymous?.
+    <div class="language-toggle">
+        <button class="language-button" onclick="switchLanguage('id')">Bahasa Indonesia</button>
+        <button class="language-button" onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <header id="header">Halo, Adreana!</header>
+    <p id="paragraph">
+        Saya ingin memberikan kesan yang baik pada Anda. Semoga Anda tidak merasa risih dengan saya. 
+        Apakah kita bisa berteman, tetapi tetap anonim? Saya akan memberikan akun kedua saya kepada Anda.
     </p>
-    <a href="#" class="cta-button" onclick="showConfirm(); return false;">Let's Be a Friend</a>
+    <a href="#" class="cta-button" id="cta-button" onclick="showConfirm(); return false;">Mari Menjadi Teman</a>
 </body>
 </html>
